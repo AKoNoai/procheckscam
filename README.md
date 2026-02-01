@@ -11,18 +11,18 @@ Cách chạy code...
 
 cd backend <br>
 npm install <br>
-npm run dev
+npm run dev <br>
 
-cd frontend
-npm install
-npm start
+cd frontend <br>
+npm install <br>
+npm start <br>
 
-.env của bạn...
+.env của bạn...<br>
 
-PORT=5000
-MONGODB_URI= đường dẫn mongodb của bạn ở đây
-JWT_SECRET=your_jwt_secret_key_here
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
+PORT=5000 <br>
+MONGODB_URI= đường dẫn mongodb của bạn ở đây <br>
+JWT_SECRET=your_jwt_secret_key_here <br>
+NODE_ENV=development <br>
+FRONTEND_URL=http://localhost:3000 <br>
 
 Nhơ follow cho Long Đỉnh nhé...
