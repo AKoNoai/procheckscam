@@ -397,9 +397,7 @@ const Report = () => {
                   </div>
                 )}
 
-                <div className="report-warning">
-                  <strong>⚠ LƯU Ý:</strong> Vui lòng gửi link các website lừa đảo, giả mạo thương hiệu, dụ cài đặt hình, phát tán virus, keylogger, fake app, hoặc các thể loại lừa đảo. Những trang này sẽ được đưa vào danh sách đen, bị cảnh báo hoặc khóa truy cập trên các nền tảng, hệ thống mã chung tối liên kết để báo về người dùng...
-                </div>
+                {/* Warning block intentionally removed as requested */}
               </div>
 
               <div className="report-field" style={{ marginTop: 14 }}>

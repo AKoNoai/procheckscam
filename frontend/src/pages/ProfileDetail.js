@@ -234,14 +234,6 @@ const ProfileDetail = () => {
                 </div>
               </div>
 
-              {/* Global warning under the services box */}
-              <div className="global-warning mt-2">
-                <span className="warning-head">
-                  <i className="fas fa-exclamation-triangle"></i>
-                  <strong>LƯU Ý:</strong>
-                </span>
-                <span className="warning-text">Hãy luôn tuân thủ <button type="button" className="warning-link">Nội Quy Giao Dịch</button>. Và phải sử dụng Bot <button type="button" className="warning-link">Discord</button> & <button type="button" className="warning-link">Telegram</button> để check khi giao dịch ...!</span>
-              </div>
             </div>
           </div>
         </div>

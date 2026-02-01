@@ -192,14 +192,6 @@ const Profile = () => {
                         </li>
                       ))}
                     </ul>
-                    <div className="profile-box_content__desc">
-                      <p>
-                        <strong>Lưu Ý:</strong> Tránh trường hợp Nick Fake, Ảnh Fake, Link Fake, Rửa
-                        Tiền…. Người dùng hãy nhớ Chát đúng Facebook, Gọi đúng SĐT, Chuyển khoản
-                        đúng những STK có ở trong trong link bảo hiểm này Checkscam cam kết bạn sẽ
-                        an toàn trong mọi giao dịch..!!!
-                      </p>
-                    </div>
                     <div className="profile-box_content_watermark">
                       <img src="/assets/images/xacnhanuytin.svg" alt="Verified" />
                     </div>
