@@ -9,8 +9,8 @@ Quỹ Bảo Hiểm CSS
 
 Cách chạy code...
 
-cd backend
-npm install
+cd backend <br>
+npm install <br>
 npm run dev
 
 cd frontend
