@@ -241,7 +241,7 @@ const Home = () => {
                   </div>
                   <div className="card-body p-0">
                     <div className="list-group list-group-flush">
-                      {topScammers.map((report, index) => (
+                      {topScammers.slice(0, 3).map((report, index) => (
                         <button
                           key={report._id}
                           type="button"
@@ -254,7 +254,7 @@ const Home = () => {
                               <i className="fas fa-user-shield text-danger me-3" style={{ fontSize: '24px' }}></i>
                               <div>
                                 <h6 className="mb-1">
-                                  {topScammers.length - index}. {report.channel === 'website' ? (report.targetContact?.website || 'Website') : (report.targetName || '---')}
+                                  {index + 1}. {report.channel === 'website' ? (report.targetContact?.website || 'Website') : (report.targetName || '---')}
                                 </h6>
                               </div>
                             </div>
