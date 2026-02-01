@@ -1,0 +1,270 @@
+.warning-detail-page {
+  padding: 28px 12px;
+}
+
+.warning-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.warning-card-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.warning-title {
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0;
+}
+
+.warning-meta {
+  color: #6c757d;
+  font-size: 12px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.warning-body {
+  padding: 16px;
+}
+
+.warning-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.warning-info {
+  border: 1px solid #eef1f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.warning-info-title {
+  background: #f8f9fa;
+  padding: 10px 12px;
+  font-weight: 700;
+  color: #1677ff;
+}
+
+.warning-info-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+  padding: 10px 12px;
+  border-top: 1px solid #eef1f4;
+}
+
+@media (max-width: 768px) {
+  .warning-info-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.warning-info-row .k {
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.warning-info-row .v {
+  color: #212529;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.warning-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.warning-evidence img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.comment-box {
+  border: 1px solid #eef1f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comment-title {
+  background: #f8f9fa;
+  padding: 10px 12px;
+  font-weight: 700;
+}
+
+.comment-form {
+  padding: 12px;
+  border-top: 1px solid #eef1f4;
+}
+
+.comment-form .nickname {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  resize: vertical;
+  min-height: 90px;
+}
+
+.comment-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.comment-form-actions .nickname {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.comment-form button {
+  border: none;
+  background: #1ba8f5;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.comment-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comment-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.comment-item {
+  padding: 12px;
+  border-top: 1px solid #eef1f4;
+}
+
+.comment-item:first-child {
+  border-top: none;
+}
+
+.comment-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.comment-head .name {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.comment-head .time {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.comment-content {
+  margin-top: 6px;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.page-alert {
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.page-alert.success {
+  background: #eafaf1;
+  border: 1px solid #b7ebc6;
+  color: #1e7e34;
+}
+
+.page-alert.error {
+  background: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #b02a37;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+  opacity: 0.7;
+}
+
+.warning-evidence img {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.warning-evidence img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,16 @@
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: #1756e3;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0 2px;
+  transition: color 0.2s;
+}
+.footer-link-btn:hover,
+.footer-link-btn:focus {
+  color: #0d2c6b;
+  text-decoration: underline;
+}

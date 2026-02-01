@@ -1,0 +1,997 @@
+.profile-detail-page {
+    background-color: white;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.edit-form-card {
+    background: white;
+    border-radius: 0;
+    padding: 2rem;
+}
+
+.edit-form-card h4 {
+    color: #333;
+    font-weight: 700;
+}
+
+.edit-form-card .form-label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.edit-form-card .form-control {
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    padding: 0.6rem 1rem;
+}
+
+.edit-form-card .form-control:focus {
+    border-color: #ffe066;
+    box-shadow: none;
+}
+
+.bank-account-item {
+    background: #f8f9fa;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 0;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    top: -100px !important;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        top: -80px !important;
+    }
+}
+
+.profile-avatar-large {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem;
+    overflow: hidden;
+    border: none;
+}
+
+.profile-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-avatar-large .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.2rem;
+}
+
+/* Explicit dark class for inline fullname when used in sentences */
+.profile-fullname-dark {
+    color: #333;
+    font-weight: 700;
+}
+
+/* inline fullname used inside sentences */
+.profile-fullname-inline {
+    color: #ff225c; /* red and bold for highlighted name */
+    font-weight: 800;
+}
+
+/* Guarantee text style inside insurance box */
+.guarantee-text {
+    color: #111; /* dark/black */
+    font-weight: 700;
+}
+
+.profile-nickname {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.profile-actions {
+    margin-bottom: 1.5rem;
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-actions .btn {
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    border: none;
+    min-width: 150px;
+}
+
+/* Giữ màu sắc rõ nét khi hover */
+.profile-actions .btn:hover {
+    filter: brightness(0.95);
+    opacity: 1;
+}
+
+
+.profile-actions .btn-primary,
+.profile-actions .btn-success {
+    background: linear-gradient(90deg, #0099f7 0%, #0074d9 100%) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+    transition: filter 0.2s;
+}
+
+.profile-actions .btn-primary:hover,
+.profile-actions .btn-success:hover {
+    filter: brightness(0.95);
+}
+
+.profile-actions .btn-success {
+    background-color: #0074D9 !important;
+    color: white !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.info-box {
+    background: white;
+    border: 2px solid #ffe066;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    height: 100%;
+    min-height: auto;
+    display: flex;
+    position: relative; /* allow absolutely positioned QR inside */
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+} 
+
+.info-box-insurance {
+    background: white;
+    border-color: #ffe066;
+}
+
+/* ensure services box matches height */
+.services-box {
+    background: white;
+    border: 3px solid #ffe066;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: left;
+    position: relative;
+    min-height: 320px;
+}
+
+.info-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.9rem;
+    text-align: center; /* center title to match bottom box header visual */
+    padding-top: 4px;
+}
+
+/* make QR a bit smaller and framed to match screenshot */
+.qr-code-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 84px; /* smaller QR to fit */
+    height: 84px;
+}
+
+.qr-code-right svg {
+    border: none; /* removed gray border */
+    padding: 0; /* remove inner padding */
+    background: transparent;
+}
+
+.info-content {
+    text-align: left;
+    flex: 1;
+    padding-top: 4px;
+}
+
+.info-content {
+    text-align: left;
+    flex: 1;
+}
+
+.info-content-flex {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.info-items-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.qr-code-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 95px;
+    height: 95px;
+}
+
+.qr-code-right svg {
+    border: none;
+    padding: 0;
+    background: transparent;
+    width: 95px !important;
+    height: 95px !important;
+}
+
+.info-content-flex-insurance {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.insurance-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.insurance-icon-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.insurance-icon-right i {
+    font-size: 3rem;
+    color: #ff1744;
+}
+
+.info-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.info-item i {
+    color: #1877f2;
+    width: 18px; /* slightly smaller icon width */
+    flex-shrink: 0;
+    margin-top: 0;
+    line-height: 1;
+    position: relative;
+    top: 1px; /* tiny baseline nudge for fontawesome */
+}
+
+/* Shop specific layout: label fixed, link flexible and wraps nicely */
+.info-item.shop {
+    display: flex;
+    align-items: baseline; /* align like other rows */
+    gap: 0.6rem; /* match other rows */
+    margin-top: 0;
+}
+
+.info-item.shop .shop-content {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem; /* keep label + link close */
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.info-item.shop .shop-label {
+    min-width: auto;
+    font-weight: inherit;
+    color: #222;
+    margin-right: 0;
+    padding-right: 0;
+    display: inline-block;
+}
+
+.info-item.shop .shop-link {
+    font-size: inherit;
+    font-weight: 700;
+}
+
+.info-item.shop .shop-link {
+    flex: 1 1 auto;
+    color: #1877f2;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.info-item.shop .shop-link:hover {
+    text-decoration: underline;
+}
+
+.info-item.shop .shop-empty {
+    color: #666;
+}
+
+.info-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.6rem; /* reduce spacing under title */
+    text-align: center;
+}
+
+/* Contact and Insurance titles should be left aligned */
+.info-box-contact .info-title,
+.info-box-insurance .info-title {
+    text-align: left;
+    padding-top: 2px;
+    margin-bottom: 0.9rem;
+}
+
+@media (max-width: 575px) {
+    /* keep titles left on small screens and stack above items */
+    .info-box-contact .info-title,
+    .info-box-insurance .info-title {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.info-item a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.qr-code {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.qr-code svg {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+.services-box {
+    background: white;
+    border: 3px solid #ffe066;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: left;
+    position: relative;
+}
+
+.info-boxes-row {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between; /* distribute across full parent width */
+    gap: 2rem;
+    align-items: stretch; /* make children stretch to same height */
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.info-boxes-row > .col-lg-6,
+.info-boxes-row > .col-12 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* allow full height child to grow */
+    width: 100%;
+    flex: 0 0 calc(50% - 1rem); /* two equal columns minus half of gap */
+    max-width: calc(50% - 1rem);
+}
+
+/* smaller screens: stack vertically */
+@media (max-width: 991px) {
+    .info-boxes-row {
+        gap: 1rem;
+        justify-content: stretch;
+        flex-wrap: wrap;
+    }
+    .info-boxes-row > .col-lg-6,
+    .info-boxes-row > .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.services-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.services-content {
+    font-size: 1.02rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.services-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.services-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+}
+
+.bank-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.bank-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.bank-list li:last-child {
+    border-bottom: none;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* Warning below services box */
+.global-warning {
+    background: transparent;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.global-warning .warning-head {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    margin-right: 0.3rem;
+    flex-shrink: 0;
+}
+
+.global-warning .warning-head i {
+    font-size: 1rem;
+    color: #faad14;
+    margin-right: 0.35rem;
+    vertical-align: -0.05em;
+}
+
+.global-warning .warning-text {
+    display: inline;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.global-warning .warning-link {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 700;
+    background: transparent; /* remove default button background */
+    border: none; /* remove default button border */
+    padding: 0; /* keep it inline with surrounding text */
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
+    vertical-align: baseline;
+}
+
+.global-warning .warning-link:hover {
+    text-decoration: underline;
+}
+
+.global-warning .warning-link:focus,
+.global-warning .warning-link:active,
+.global-warning .warning-link:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .global-warning {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+    .global-warning .warning-head,
+    .global-warning .warning-text {
+        font-size: 0.9rem;
+    }
+    .global-warning .warning-head i { 
+        font-size: 0.95rem; 
+    }
+}
+
+.watermark {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Stamp-style watermark bottom-right */
+.stamp-checkscam {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    transform: rotate(-8deg) scale(1.2);
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(220, 80, 120, 0.35);
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    min-width: 260px;
+    width: max-content;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stamp-lock {
+    color: rgba(220, 80, 120, 0.5);
+    font-size: 26px;
+}
+
+.stamp-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.stamp-text-top {
+    color: rgba(180, 80, 100, 0.5);
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+.stamp-text-main {
+    color: rgba(180, 80, 100, 0.5);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1.2px;
+}
+
+.profile-footer {
+    border-top: 2px solid #e9ecef;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Responsive Design - Tablets and smaller laptops */
+@media (max-width: 991px) {
+    .profile-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .profile-avatar-large {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .profile-actions {
+        gap: 1.5rem;
+    }
+
+    .profile-actions .btn {
+        max-width: 300px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .info-boxes-row {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .info-box {
+        padding: 1rem;
+    }
+
+    .info-title {
+        font-size: 0.95rem;
+    }
+
+    .info-item {
+        font-size: 0.85rem;
+    }
+
+    .qr-code-right svg {
+        width: 110px;
+        height: 110px;
+    }
+
+    .insurance-icon-right i {
+        font-size: 3.6rem;
+    }
+
+    .services-box {
+        padding: 1rem;
+    }
+
+    .services-title {
+        font-size: 0.95rem;
+    }
+
+    .services-list {
+        font-size: 0.85rem;
+    }
+
+    .services-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .stamp-checkscam {
+        transform: rotate(-8deg) scale(1.15);
+        right: 10px;
+        bottom: 10px;
+        min-width: 260px;
+        padding: 12px 18px;
+        opacity: 0.35;
+        z-index: 1;
+    }
+
+    .stamp-lock {
+        font-size: 30px;
+    }
+
+    .stamp-text-top {
+        font-size: 14px;
+    }
+
+    .stamp-text-main {
+        font-size: 24px;
+    }
+
+    .global-warning {
+        font-size: 0.8rem;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .simple-footer .footer-lock {
+        font-size: 48px;
+    }
+
+    .simple-footer .footer-ceo {
+        font-size: 12px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 575px) {
+    .profile-card {
+        padding: 1rem 0.75rem;
+    }
+
+    .profile-avatar-large {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 1rem;
+    }
+
+    /* Keep the stamp tilted on small screens (matches desktop tilt) */
+    .stamp-checkscam {
+        transform: rotate(-8deg) scale(0.9);
+        right: 5px;
+        bottom: 10px;
+        min-width: 180px;
+        padding: 6px 10px;
+        opacity: 0.95;
+    }
+
+    /* Profile name */
+    .profile-name {
+        font-size: 1.4rem;
+        line-height: 1.1;
+    }
+
+    .profile-nickname {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* ACTION BUTTONS */
+    .profile-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        margin-bottom: 1.2rem;
+    }
+
+    .profile-actions .btn {
+        display: inline-flex;
+        width: auto;
+        min-width: 110px;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0.22rem 0.55rem;
+        font-size: 0.82rem; /* slightly smaller to avoid overflow */
+        line-height: 1.15;
+        height: 34px;
+        min-height: 34px;
+        align-items: center;
+        white-space: nowrap;
+        gap: 4px; /* smaller spacing */
+    }
+
+    /* Make icons smaller and centered */
+    .profile-actions .btn i {
+        font-size: 0.8rem; /* ~13px */
+        line-height: 1;
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-boxes-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile: QR stays on right */
+    .info-content-flex {
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.6rem;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .info-items-left {
+        flex: 1 1 auto;
+        min-width: 0;
+        padding-right: 0; /* allow text to extend under QR */
+        white-space: normal;
+        overflow: visible;
+        z-index: 3; /* above QR so text overlays */
+        max-width: 100%; /* full width so text can flow under QR */
+    }
+
+    .info-items-left .info-item {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+        white-space: normal;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+
+    .info-items-left .info-item span,
+    .info-items-left .info-item a {
+        display: inline-block;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    /* QR code on mobile: keep same size but position absolute so content can overlap */
+    .qr-code-right {
+        position: absolute; /* absolute in .info-box */
+        top: 12px;
+        right: 12px;
+        transform: none;
+        width: 75px;
+        height: 75px;
+        flex-shrink: 0;
+        z-index: 1; /* below the content */
+    }
+
+    .qr-code-right svg {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    .info-content-flex-insurance {
+        flex-direction: row;
+        gap: 0.8rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .insurance-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .insurance-icon-right {
+        margin-top: 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        width: 65px;
+        height: 65px;
+    }
+
+    .insurance-icon-right i {
+        font-size: 2.5rem;
+    }
+
+    /* Stamp */
+    .stamp-checkscam {
+        position: absolute;
+        transform: rotate(-8deg) scale(1.1);
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        min-width: 200px;
+        margin: 0;
+        padding: 10px 14px;
+        float: none;
+        opacity: 0.35;
+        z-index: 1;
+    }
+
+    .stamp-lock {
+        font-size: 24px;
+    }
+
+    .stamp-text-top {
+        font-size: 12px;
+    }
+
+    .stamp-text-main {
+        font-size: 20px;
+    }
+
+    /* Content font sizes */
+    .info-box .info-content,
+    .services-content,
+    .info-item,
+    .profile-desc {
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+
+    .info-item a,
+    .info-item.shop .shop-link {
+        font-weight: 700;
+    }
+
+    .info-title,
+    .services-title,
+    .profile-box_content__title {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    /* reduce paddings */
+    .info-box, .services-box {
+        min-height: auto;
+        padding: 0.9rem;
+    }
+
+    .profile-card {
+        overflow: visible;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        border-radius: 10px;
+    }
+
+    .global-warning {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .simple-footer {
+        padding: 15px 0 20px;
+    }
+
+    .simple-footer .footer-lock {
+        font-size: 40px;
+    }
+
+    .simple-footer .footer-links {
+        font-size: 13px;
+    }
+
+    .simple-footer .footer-ceo {
+        font-size: 11px;
+    }
+}
+
+/* Large laptops and desktops */
+@media (min-width: 992px) {
+    .profile-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .info-boxes-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    .profile-card {
+        padding: 3rem 2.5rem;
+    }
+
+    .info-boxes-row {
+        column-gap: 1.5rem;
+    }
+}

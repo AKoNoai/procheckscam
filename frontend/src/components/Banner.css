@@ -1,0 +1,145 @@
+.banner-ads-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* reduced gap so banners sit closer */
+  margin: 18px 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px; /* smaller horizontal padding */
+  flex-wrap: wrap;
+} 
+.banner-ads-item {
+  /* Default: show 3 items in a row but narrower */
+  flex: 0 1 calc(28% - 16px);
+  max-width: 260px; /* limit width so banners don't get too wide */
+  text-align: center;
+}
+
+/* Keep three items until mobile breakpoint; adjust spacing */
+@media (max-width: 900px) {
+  .banner-ads-item { flex: 0 1 calc(33.333% - 16px); max-width: calc(33.333% - 16px); }
+}
+@media (max-width: 600px) {
+  /* Mobile: show 1 banner full width */
+  .banner-ads-item { flex: 0 1 100%; max-width: 100%; padding: 0 12px; }
+}
+.banner-ads-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 6; /* proportional height that follows width */
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.12s ease;
+  display: block;
+  max-height: 300px; /* increased default max-height to make banners taller */
+}
+.banner-ads-item img:hover {
+  transform: none;
+  box-shadow: none;
+}     
+
+/* Responsive sizes */
+@media (max-width: 992px) {
+  .banner-ads-item img { aspect-ratio: 16 / 5; max-height: 160px; }
+  .banner-ads-wrapper { gap: 12px; }
+}   
+@media (max-width: 768px) {
+  .banner-ads-item img { aspect-ratio: 3 / 1; max-height: 120px; border-radius: 10px; }
+  .banner-ads-wrapper { padding: 0 12px; gap: 10px; }
+}   
+@media (max-width: 600px) {
+  .banner-ads-item { flex: 0 1 100%; max-width: 100%; padding: 0 12px; }
+  .banner-ads-item img { aspect-ratio: 3 / 1; max-height: 140px; border-radius: 0; box-shadow: none; }
+  .banner-ads-wrapper { gap: 10px; padding: 0 8px; }
+  /* Show only the first banner on narrow screens */
+  .banner-ads-item:nth-child(n+2) { display: none; }
+}     
+@media (max-width: 420px) {
+  .banner-ads-item img { aspect-ratio: 3 / 1; max-height: 120px; border-radius: 10px; }
+} 
+
+/* Disable hover transforms on touch devices for a smoother experience */
+@media (hover: none) {
+  .banner-ads-item img:hover { transform: none; box-shadow: none; }
+} 
+
+/* When the image is too small, avoid upscaling: show centered image at native size */
+.banner-ads-item.no-upscale img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 160px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 0;
+} 
+
+/* Force cover behavior when source is large enough */
+.banner-ads-item.cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* fade transitions for appear/disappear */
+.banner-ads-item {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.banner-ads-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.banner-ads-item.hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Side banners (fixed) */
+.banner-side {
+  position: fixed;
+  /* top will be set inline to align with main banner */
+  width: 170px;
+  height: 320px;
+  display: block;
+  z-index: 50;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  transition: opacity 0.12s ease;
+  background: #fff;
+}
+.banner-side img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.banner-side.left { left: 18px; }
+.banner-side.right { right: 18px; }
+.banner-side:hover { transform: none; } 
+
+/* Hide side banners on smaller screens */
+@media (max-width: 1200px) {
+  .banner-side { display: none; }
+}
+
+/* Make sure side banners don't overlap footer area on very short screens */
+@media (max-height: 700px) {
+  .banner-side { top: 12%; height: 240px; }
+}
+
+/* Reduce banner height and width on very large screens so banners look slimmer when viewport is very wide */
+@media (min-width: 1200px) {
+  .banner-ads-item img { max-height: 260px; }
+  .banner-ads-item { max-width: 360px; }
+}
+@media (min-width: 1600px) {
+  .banner-ads-item img { max-height: 240px; }
+  .banner-ads-item { max-width: 360px; }
+}
+@media (min-width: 2000px) {
+  .banner-ads-item img { max-height: 220px; }
+  .banner-ads-item { max-width: 360px; }
+}

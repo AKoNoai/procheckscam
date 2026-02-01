@@ -1,0 +1,347 @@
+.marketplace-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    padding-bottom: 80px;
+}
+
+.marketplace-header {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.marketplace-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marketplace-header p {
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.marketplace-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-create-listing {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-create-listing:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    color: white;
+}
+
+.marketplace-filters {
+    padding: 15px 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.filter-tab {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f0f0f0;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.filter-tab.active {
+    background: #2196F3;
+    color: white;
+}
+
+.filter-tab:hover:not(.active) {
+    background: #e0e0e0;
+}
+
+.marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.listing-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listing-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #bbb;
+    font-size: 48px;
+}
+
+.listing-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.listing-badge.featured {
+    background: #FFD700;
+    color: #333;
+}
+
+.listing-badge.sold {
+    background: #f44336;
+    color: white;
+}
+
+.listing-image-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.listing-content {
+    padding: 15px;
+}
+
+.listing-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.listing-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f44336;
+    margin-bottom: 10px;
+}
+
+.listing-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.listing-seller {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.listing-stats {
+    display: flex;
+    gap: 10px;
+}
+
+.listing-stats span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.marketplace-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+
+.marketplace-empty i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.marketplace-empty h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.marketplace-loading {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.marketplace-loading .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f0f0f0;
+    border-top-color: #2196F3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2196F3;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:not(:disabled):hover {
+    background: #1976D2;
+}
+
+.pagination span {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: #666;
+}
+
+/* Search box */
+.marketplace-search {
+    padding: 0 20px 15px;
+    background: white;
+}
+
+.search-input-wrapper {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-input-wrapper input:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .marketplace-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .listing-image {
+        height: 150px;
+    }
+
+    .listing-content {
+        padding: 10px;
+    }
+
+    .listing-title {
+        font-size: 14px;
+    }
+
+    .listing-price {
+        font-size: 16px;
+    }
+
+    .marketplace-header h1 {
+        font-size: 22px;
+    }
+}

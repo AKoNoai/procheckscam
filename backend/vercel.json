@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node", "config": { "includeFiles": ["uploads/**"] } }
+  ],
+  "routes": [
+    { "src": "/api/expireListings", "dest": "api/expireListings.js" },
+    { "src": "/api/(.*)", "dest": "api/server.js" }
+  ],
+  "crons": [
+    { "path": "/api/expireListings", "schedule": "0 * * * *" }
+  ]
+}

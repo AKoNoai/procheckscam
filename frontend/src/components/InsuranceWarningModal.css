@@ -1,0 +1,69 @@
+.insurance-warning-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.insurance-warning-modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px 18px 24px;
+  max-width: 600px;
+  width: 98vw;
+  position: relative;
+  text-align: center;
+}
+.insurance-warning-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #222;
+  cursor: pointer;
+}
+.insurance-warning-modal-icon {
+  font-size: 54px;
+  color: #ff225c;
+  margin-bottom: 10px;
+}
+.insurance-warning-modal-title {
+  color: #d6001c;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+.insurance-warning-modal-warning {
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.insurance-warning-modal-link {
+  margin-bottom: 6px;
+}
+.insurance-warning-modal-note {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.insurance-warning-modal-btn {
+  background: #ff2222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.insurance-warning-modal-btn:hover {
+  background: #d6001c;
+}
