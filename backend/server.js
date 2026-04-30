@@ -6,6 +6,13 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 require('dotenv').config();
 
+const dns = require('dns');
+try {
+    dns.setServers(['1.1.1.1', '8.8.8.8']);
+} catch (error) {
+    console.warn('⚠️ Không thể đặt DNS server tuỳ chỉnh, dùng DNS hệ thống:', error.message);
+}
+
 
 console.log('DEBUG MONGODB_URI:', process.env.MONGODB_URI);
 const app = express();

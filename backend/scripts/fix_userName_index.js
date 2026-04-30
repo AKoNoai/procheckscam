@@ -9,12 +9,15 @@ Usage: node scripts/fix_userName_index.js
 
 const mongoose = require('mongoose');
 const User = require('../models/User');
+const { configureMongoDns, normalizeMongoUri } = require('../config/mongoUri');
 require('dotenv').config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/checkscam';
+const MONGODB_URI = normalizeMongoUri(process.env.MONGODB_URI);
 
 (async () => {
   try {
+    configureMongoDns();
+
     await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log('Connected to MongoDB');
 

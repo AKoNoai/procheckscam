@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 const User = require('../models/User');
+const { configureMongoDns, normalizeMongoUri } = require('../config/mongoUri');
 require('dotenv').config();
 
 const createSuperAdmin = async () => {
 	try {
+		configureMongoDns();
+
 		// Connect to MongoDB
-		await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/checkscam', {
+		await mongoose.connect(normalizeMongoUri(process.env.MONGODB_URI), {
 			useNewUrlParser: true,
 			useUnifiedTopology: true
 		});

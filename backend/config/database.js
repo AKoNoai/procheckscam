@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
+const { normalizeMongoUri } = require('./mongoUri');
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        const mongoUri = normalizeMongoUri(process.env.MONGODB_URI);
+        const conn = await mongoose.connect(mongoUri);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
-        console.error(`Error: ${error.message}`);
-        process.exit(1);
+        console.error(`MongoDB connection failed: ${error.message}`);
+
+        // Keep the app booting in local development so the server can still start
+        // even when MongoDB is unavailable.
+        return null;
     }
 };
 
